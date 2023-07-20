@@ -1,0 +1,215 @@
+ header{  
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 72px;
+        #nav{
+            display: none;
+        }
+        .nav-left{
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            ul{
+                display: flex;
+                gap: 24px;
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    color: var(--neutral-900, #111827);
+                }
+            }
+        }
+    .nav-center{
+        display: none;
+    }
+    .nav-right{
+        display: flex;
+        gap: 12px;
+        .nav-boxs{
+            display: flex;
+            gap: 13px;
+            align-items: center;
+            background-color: black;
+            color: white;
+            padding: 7px 8px;
+            border-radius: 9px;
+            i{
+                font-size: 25px;
+            }
+            .nav-text p{
+                font-size: 12px;
+            }
+        }
+    }
+
+
+}
+ }
+.hero{
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    .hero-left{
+       max-width: 648px;
+       padding-top: 96px;
+       padding-right: 48px; 
+       h1{
+        color: var(--neutral-900, #111827);
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 72px; 
+        letter-spacing: -1.5px;
+        margin-bottom: 16px;
+       }
+       p{
+        color: var(--neutral-700, #374151);
+        font-size: 18px;
+        font-style: normal;
+        line-height: 28px; 
+        margin-bottom: 32px;
+       }
+       .hero-button{
+         display: flex;
+         gap: 16px;
+         align-items: center;
+         color: #ffffff;
+         a{
+            display: flex;
+            padding: 16px 24px;
+            background-color: #7C3AED;
+            text-decoration: none;
+            color: #ffffff;
+            border-radius: 10px;
+         }
+         .a{
+            background-color: #ffffff;
+            color: #7C3AED;
+            display: flex;
+            gap: 10px;
+         }
+         .a:hover{
+            background-color: #7C3AED;
+            color: #ffffff;
+            .svg{
+                color: red;
+            }
+         }
+       }
+    }
+    .hero-right{
+        padding: 0 84px;
+        max-width: 320px;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .header{
+        nav{
+            display: flex;
+            gap: 90px;
+            justify-content: space-around;
+           .nav-left ul{
+            display: none;
+           } 
+           .nav-center{
+            display: block;
+            i{
+                font-size: 30px;
+            }        
+           }
+           #nav:checked+.nav-left{
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 30px;
+            background-color: #dfedee;
+            .img{
+                display: none;
+            }
+            ul{
+                display: flex;
+                width: 100%;
+                gap: 100px;
+                flex-wrap: wrap;
+                // background-color: #dfedee;
+                text-align: center;
+                padding: 20px 20px;
+            }
+            a{
+                width: 100%;
+                font-size: 22px;
+            }
+           }
+        }
+        .hero{
+            .hero-left{
+                max-width: 688px;
+                width: 100%;
+                h1{
+                    font-size: 48px;
+                    margin-top: -60px;
+                }
+                .hero-button{
+                    margin-bottom: 80px;
+                }
+            }
+            .hero-right{
+                max-width: 640px;
+                margin: 0 auto;
+                padding: 0px 84px;
+                img{
+                    width: 320px;
+                    padding: 0px;
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+    
+    
+}
+@media screen and (max-width:467px) {
+    .header{
+        nav{
+            gap: 2px;
+            margin-bottom: -1px;
+            .nav-left{
+                padding-top: 40px;
+                padding-bottom: 40px;
+                ul{
+                    display: none;
+                }
+            }
+            .nav-right{
+                display: none;
+            }
+        }
+        .hero{
+            .hero-left{
+                max-width: 320px;
+                margin: 0 auto;
+                h1{
+                    font-size: 30px;
+                    line-height: 45px;
+                    letter-spacing: -0.9px;
+                }
+                p{
+                    line-height: 28px;
+                }
+            }
+            .hero-right{
+                max-width: 320px;
+                padding-left: 0px;
+            }
+        }
+    }
+    
+}
